@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const getCake = (namaParameterBebas) => {
+        //     console.log(namaParameterBebas)
+        //     let cake = null;
+        //     console.log("Sedang membuat kue, silakan tunggu ....")
+        //     setTimeout(() => {
+        //         cake = "Kue Selesai!";
+        //         namaParameterBebas(cake);
+        //     }, 3000)
+        // }
+
+        // getCake(cake => {
+        //     console.log(cake);
+        // })
+
+
+        const getCake = (callback) => {
+            let cake = null;
+            console.log("Sedang membuat kue, silakan tunggu ....")
+
+            setTimeout(() => {
+                cake = "Kue Selesai!";
+                callback(cake);
+            }, 3000)
+        }
+
+        // const isCakeReady = (cake) => {
+        //     console.log(cake);
+        // }
+
+        function isCakeReady(cake){
+            console.log(cake);
+        }
+
+        console.log(isCakeReady)
+
+        getCake(isCakeReady);
+    </script>
+</body>
+
+</html>
